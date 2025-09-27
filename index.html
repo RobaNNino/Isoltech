@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isoltech - L'innovazione al servizio dell'edilizia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css?v=<?php echo time(); ?>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container-fluid px-3 px-lg-5">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/isoltech_logo.png" alt="Isoltech" height="60">
+            </a>
+            <button class="mobile-menu-toggle d-lg-none" aria-label="Apri menu">
+                <span class="mm-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse d-none d-lg-block" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/chi-siamo.html">Chi Siamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/lavori.html">I Nostri Lavori</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">Servizi<i class="fas fa-chevron-down nav-caret" aria-hidden="true"></i></a>
+                        <ul class="dropdown-menu shadow-lg rounded-3 dropdown-menu-start" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="pages/sistemi-a-secco.html"><i class="fas fa-hard-hat me-2 text-muted"></i> Sistemi a Secco</a></li>
+                            <li><a class="dropdown-item" href="pages/isolamenti.html"><i class="fas fa-thermometer-half me-2 text-muted"></i> Isolamenti</a></li>
+                            <li><a class="dropdown-item" href="pages/controsoffitti.html"><i class="fas fa-border-all me-2 text-muted"></i> Controsoffitti</a></li>
+                            <li><a class="dropdown-item" href="pages/antincendio.html"><i class="fas fa-fire-extinguisher me-2 text-muted"></i> Antincendio</a></li>
+                            <li><a class="dropdown-item" href="pages/finitura.html"><i class="fas fa-paint-brush me-2 text-muted"></i> Opere di Finitura</a></li>
+                            <li><a class="dropdown-item" href="pages/amianto.html"><i class="fas fa-exclamation-triangle me-2 text-muted"></i> Bonifica Amianto</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contatti.php">Contatti</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Custom Mobile Menu (No Bootstrap) -->
+    <div class="mobile-menu-backdrop d-lg-none"></div>
+    <div class="mobile-menu d-lg-none" role="dialog" aria-label="Menu Mobile">
+        <div class="mobile-menu-header">
+            <img src="images/isoltech_logo.png" alt="Isoltech" height="32">
+            <button class="mobile-menu-close" aria-label="Chiudi menu"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="mobile-menu-body">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/chi-siamo.html">Chi Siamo</a></li>
+                <li class="nav-item"><a class="nav-link" href="pages/lavori.html">I Nostri Lavori</a></li>
+                <li class="nav-item has-submenu">
+                    <button class="nav-link mm-submenu-toggle" aria-expanded="false">Servizi <i class="fas fa-chevron-down ms-2 chev" aria-hidden="true"></i></button>
+                    <ul class="mm-submenu list-unstyled mb-2">
+                        <li><a class="nav-link" href="pages/sistemi-a-secco.html">Sistemi a Secco</a></li>
+                        <li><a class="nav-link" href="pages/isolamenti.html">Isolamenti</a></li>
+                        <li><a class="nav-link" href="pages/controsoffitti.html">Controsoffitti</a></li>
+                        <li><a class="nav-link" href="pages/antincendio.html">Antincendio</a></li>
+                        <li><a class="nav-link" href="pages/finitura.html">Opere di Finitura</a></li>
+                        <li><a class="nav-link" href="pages/amianto.html">Bonifica Amianto</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="pages/contatti.php">Contatti</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-8">
+                    <div class="hero-categories mb-3" data-aos="fade-up" data-aos-duration="800">
+                        <a href="pages/lavori.html#sistemi-secco" class="badge rounded-pill bg-light text-dark me-2 mb-2 text-decoration-none">Sistemi a Secco</a>
+                        <a href="pages/lavori.html#isolamenti" class="badge rounded-pill bg-light text-dark me-2 mb-2 text-decoration-none">Isolamento Termico</a>
+                        <a href="pages/lavori.html#antincendio" class="badge rounded-pill bg-light text-dark me-2 mb-2 text-decoration-none">Antincendio</a>
+                        <a href="pages/lavori.html#finiture" class="badge rounded-pill bg-light text-dark me-2 mb-2 text-decoration-none">Finiture</a>
+                        <a href="pages/lavori.html#amianto" class="badge rounded-pill bg-light text-dark me-2 mb-2 text-decoration-none">Bonifica Amianto</a>
+                    </div>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1000">
+                        ISOLTECH
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                        L'INNOVAZIONE AL SERVIZIO DELL'EDILIZIA
+                    </p>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                        Precisione e qualità dei lavori e dei prodotti sono sempre state le nostre parole d'ordine, 
+                        valori che ci hanno permesso in poco tempo di espandere i nostri orizzonti.
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                        <a href="pages/chi-siamo.html" class="btn btn-primary btn-lg me-3">Scopri di più</a>
+                        <a href="#categories" class="btn btn-light btn-lg me-3">I nostri lavori</a>
+                        <a href="pages/contatti.php" class="btn btn-outline-light btn-lg">Contattaci</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section py-5" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-up">I Nostri Servizi</h2>
+                    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        Soluzioni complete per l'edilizia moderna
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hard-hat"></i>
+                        </div>
+                        <h4>Sistemi a Secco</h4>
+                        <p>Realizzazione di pareti divisorie e controsoffitti con tecnologie all'avanguardia.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-thermometer-half"></i>
+                        </div>
+                        <h4>Isolamenti Termici</h4>
+                        <p>Soluzioni per l'efficienza energetica e il comfort abitativo.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-fire-extinguisher"></i>
+                        </div>
+                        <h4>Adeguamento Antincendio</h4>
+                        <p>Sistemi di sicurezza conformi alle normative vigenti.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-volume-mute"></i>
+                        </div>
+                        <h4>Isolamenti Acustici</h4>
+                        <p>Soluzioni per il controllo del rumore e l'acustica ambientale.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Opere di Finitura</h4>
+                        <p>Completamento e rifinitura di ogni tipo di progetto edilizio.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h4>Bonifica Amianto</h4>
+                        <p>Rimozione sicura e smaltimento secondo le normative.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section py-5" id="categories">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center justify-content-between mb-3">
+                    <div>
+                        <h2 class="section-title mb-0" data-aos="fade-up">Categorie lavori</h2>
+                        <p class="section-subtitle mb-0" data-aos="fade-up" data-aos-delay="150">Sfoglia le nostre specializzazioni</p>
+                    </div>
+                    <div class="categories-cta" data-aos="fade-left" data-aos-delay="250">
+                        <a href="pages/lavori.html" class="btn btn-categories">
+                            <span class="lbl">Vedi tutti i lavori</span>
+                            <i class="fas fa-arrow-right long"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid px-0">
+            <div class="categories-scroller-wrap" data-aos="fade-up" data-aos-delay="150">
+                <button class="cat-nav prev" aria-label="Scorri a sinistra"><i class="fas fa-chevron-left"></i></button>
+                <div class="categories-scroller">
+                <a class="category-card" href="pages/sistemi-a-secco.html">
+                    <div class="category-bg" style="background-image:url('images/modern-equipment.jpg')"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <div class="category-icon"><i class="fas fa-hard-hat"></i></div>
+                        <h3 class="category-title">Sistemi a secco</h3>
+                        <p class="category-desc">Pareti divisorie, controsoffitti, rivestimenti ad alte prestazioni.</p>
+                    </div>
+                </a>
+                <a class="category-card" href="pages/lavori.html#isolamenti">
+                    <div class="category-bg" style="background-image:url('images/hero-construction.jpg')"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <div class="category-icon"><i class="fas fa-thermometer-half"></i></div>
+                        <h3 class="category-title">Isolamenti termici</h3>
+                        <p class="category-desc">Efficienza energetica per comfort e risparmio.</p>
+                    </div>
+                </a>
+                <a class="category-card" href="pages/lavori.html#isolamenti">
+                    <div class="category-bg" style="background-image:url('images/worker-site.jpg')"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <div class="category-icon"><i class="fas fa-volume-mute"></i></div>
+                        <h3 class="category-title">Isolamenti acustici</h3>
+                        <p class="category-desc">Soluzioni fonoassorbenti per ambienti più silenziosi.</p>
+                    </div>
+                </a>
+                <a class="category-card" href="pages/lavori.html#antincendio">
+                    <div class="category-bg" style="background-image:url('images/modern-equipment.jpg')"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <div class="category-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                        <h3 class="category-title">Adeguamento antincendio</h3>
+                        <p class="category-desc">Protezione e sicurezza secondo normativa.</p>
+                    </div>
+                </a>
+                <a class="category-card" href="pages/lavori.html#finiture">
+                    <div class="category-bg" style="background-image:url('images/hero-construction.jpg')"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <div class="category-icon"><i class="fas fa-paint-brush"></i></div>
+                        <h3 class="category-title">Opere di finitura</h3>
+                        <p class="category-desc">Dettagli che fanno la differenza.</p>
+                    </div>
+                </a>
+                <a class="category-card" href="pages/lavori.html#amianto">
+                    <div class="category-bg" style="background-image:url('images/worker-site.jpg')"></div>
+                    <div class="category-overlay"></div>
+                    <div class="category-content">
+                        <div class="category-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                        <h3 class="category-title">Bonifica amianto</h3>
+                        <p class="category-desc">Rimozione e smaltimento in sicurezza.</p>
+                    </div>
+                </a>
+                </div>
+                <button class="cat-nav next" aria-label="Scorri a destra"><i class="fas fa-chevron-right"></i></button>
+                <div class="cat-fade fade-left" aria-hidden="true"></div>
+                <div class="cat-fade fade-right" aria-hidden="true"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section py-5 bg-light" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="images/about-isoltech.jpg" alt="Isoltech Team" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title">Chi Siamo</h2>
+                    <p class="lead">
+                        Isoltech Soc. Coop. nasce nel 2015 a Vasanello come azienda edile specializzata 
+                        nella realizzazione di sistemi a secco e finiture.
+                    </p>
+                    <p>
+                        Con un fatturato in continua e costante crescita, Isoltech può considerarsi oggi 
+                        una solida realtà nel panorama dell'imprenditoria italiana, comprendendo al nostro 
+                        interno professionisti dell'edilizia a tutto tondo.
+                    </p>
+                    <a href="pages/chi-siamo.html" class="btn btn-primary">Scopri la nostra storia</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-section py-5" id="why">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5">
+                    <h2 class="section-title text-white" data-aos="fade-up">
+                        HAI BISOGNO DI AIUTO? NON ESITARE NEL CHIEDERE MAGGIORI INFORMAZIONI
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="why-content">
+                            <h4>Efficienza Aziendale</h4>
+                            <p>Siamo costantemente alla ricerca di maggiore efficienza aziendale ed un elevato standard di competenze per dare il massimo della qualità.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="why-content">
+                            <h4>Conformità Normativa</h4>
+                            <p>Raggiungiamo i traguardi, assicurandoci che le attività siano svolte in piena conformità con tutte le normative di legge vigenti.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="why-content">
+                            <h4>Progetti Completi</h4>
+                            <p>Opere civili, industriali o commerciali sono il nostro pane quotidiano per dare forma e solidità ai tuoi progetti.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="why-card">
+                        <div class="why-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="why-content">
+                            <h4>Attenzione al Cliente</h4>
+                            <p>Ascoltiamo a fondo i tuoi bisogni e ne curiamo personalmente la soddisfazione.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="brand-badge mb-3">
+                        <img src="images/isoltech_logo.png" alt="Isoltech">
+                    </div>
+                    <p>L'innovazione al servizio dell'edilizia. Precisione e qualità sono le nostre parole d'ordine.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Contatti</h5>
+                    <p><i class="fas fa-phone me-2"></i> 0761 541001</p>
+                    <p><i class="fas fa-envelope me-2"></i> contatti@isoltech.info</p>
+                    <p><i class="fas fa-id-card me-2"></i> P.IVA: 02172440568</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Seguici</h5>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/isoltech.info" class="text-light me-3" target="_blank" rel="noopener" aria-label="Isoltech su Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/isoltech_2015/" class="text-light me-3" target="_blank" rel="noopener" aria-label="Isoltech su Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/isoltechsociet%C3%A0cooperativa" class="text-light me-3" target="_blank" rel="noopener" aria-label="Isoltech su LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <a href="#" class="text-light">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>&copy; 2025 Isoltech Soc. Coop. Tutti i diritti riservati.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
+

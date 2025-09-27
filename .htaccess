@@ -1,0 +1,15 @@
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresByType text/css "access plus 1 hour"
+</IfModule>
+
+# Serve index.html for directory requests
+DirectoryIndex index.html index.php
+
+# Remove index.html from URLs (e.g., /index.html -> /, /cartella/index.html -> /cartella/)
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Redirect any request ending with index.html to the same path without the file
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+</IfModule>
